@@ -23,6 +23,8 @@ import Lesson12 from './lessons/lesson_12/Lesson12';
 import Lesson13 from './lessons/lesson_13/Lesson13';
 import ForceUsers from './components/forceUsers/ForceUsers';
 import GenderForm from './components/genderForm/GenderForm';
+import Shop from './components/shop/Shop';
+import ShopProductInfo from './components/shopProductInfo/ShopProductInfo';
 
 
 const root = ReactDOM.createRoot(
@@ -44,6 +46,9 @@ root.render(
         <Route element={<GenderForm />} path='gender-form' />
         <Route element={<Feedback />} path='feedback' />
         <Route element={<ForceUsers />} path='force-users' />
+        <Route element={<Shop />} path='shop' />
+        {/* id - это динамический параметр который мы будем забирать в компоненте ис использовать для fetch запроса данных о продукте */}
+        <Route element={<ShopProductInfo />} path='shop/:id' />
         <Route element={<Lesson01 />} path='lesson-1' />
         <Route element={<Lesson02 />} path='lesson-2' />
         <Route element={<Lesson03 />} path='lesson-3' />
